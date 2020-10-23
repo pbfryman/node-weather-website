@@ -53,3 +53,11 @@ button {
   color: white;
   padding: 8px;
 }
+
+.hidden {
+  display: none;
+}
+
+.current-weather {
+  width: 150px;
+}
