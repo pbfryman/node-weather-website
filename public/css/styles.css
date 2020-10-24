@@ -4,6 +4,7 @@ body {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 16px;
+  background-image: linear-gradient(to bottom right, rgb(83, 171, 230), white);
 
   display: flex;
   flex-direction: column;

@@ -19,8 +19,8 @@ weatherForm.addEventListener('submit', (e) => {
     const img = document.createElement("img")
     img.setAttribute("class", "current-weather")
     img.setAttribute("src", `/img/${value}.png`)
-    img.setAttribute("width", "150")
-    img.setAttribute("height", "150")
+    img.setAttribute("max-width", "100%")
+    img.setAttribute("height", "auto")
     document.getElementById('weather').appendChild(img)
   }
 
@@ -33,7 +33,10 @@ weatherForm.addEventListener('submit', (e) => {
           getImage('rain')
         } else if (data.forecast.includes('Sunny') || data.forecast.includes('Clear')) {
           getImage('sunny')
-        } else if (data.forecast.includes('Overcast') || data.forecast.includes('cloudy')) {
+        } else if (data.forecast.includes('Partly')) {
+          getImage('partlycloudy')
+        }
+         else if (data.forecast.includes('Overcast') || data.forecast.includes('Cloudy')) {
           getImage('cloudy')
         } else if (data.forecast.includes('Snow')) {
           getImage('snowy')
